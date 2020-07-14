@@ -1,4 +1,77 @@
 <!DOCTYPE html>
 <html>
-<p> HELLO </p>
+    <head>
+        <title> Andrea Shao </title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            overflow: hidden;
+        }
+        .top-navigation {
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+            border: none;
+            cursor: pointer;
+            width: 5%;
+            float: right;
+            height: 8%;
+            font-weight: 500;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+        }
+        .flex-item {
+            order: 2;
+            height: 100%;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <button class="top-navigation" onclick="openTab('Projects')">
+            <i class="material-icons">laptop_chromebook</i>
+        </button>
+        <button class="top-navigation" onclick="openTab('Experience')">
+            <i class="material-icons">business_center</i>
+        </button>
+        <button class="top-navigation" id="defaultPage" onclick="openTab('About')">
+            <i class="material-icons">account_circle</i>
+        </button>
+        <div id="Home" class="flex-container">
+            <p>home hello</p>
+        </div>
+        <div id="Projects" class="flex-container">
+            <p>proj hello</p>
+        </div>
+        <div id="Experience" class="flex-container"> 
+            <p>work hello</p>
+        </div>
+        <div id="About" class="flex-container">
+            <div class="flex-item" style="flex-grow: 2;">
+                
+            </div>        
+        </div>
+
+        <script>
+            function openTab(tabID) {
+                var i, tabPages, thisTab;
+                tabPages = document.getElementsByClassName("flex-container");
+                for (i = 0; i < tabPages.length; i++) {
+                    tabPages[i].style.display = 'none';
+                }
+                // usually display is none
+                thisTab = document.getElementById(tabID).style.display = "flex";                
+            }
+
+            // open default page (home page)
+            document.getElementById("defaultPage").click();
+        </script>
+    </body>
 </html>
