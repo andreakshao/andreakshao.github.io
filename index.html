@@ -66,6 +66,7 @@
             background-color: rgb(167, 151, 151);
             width: 100%;
             position: fixed;
+            z-index: 1;
         }
         .logo {
             text-transform: uppercase;
@@ -165,6 +166,23 @@
         .toggle .line3 {
             transform: rotate(45deg) translate(-3px,-6px);
         }
+        .hoverEffect {
+            opacity: 0;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transition: .5s ease;
+        }
+        .image {
+            opacity: 1;
+            transition: .5s ease;
+        }
+        .hoverImage:hover .image {
+            opacity: 0.3;
+        }
+        .hoverImage:hover .hoverEffect{
+            opacity: 1;
+        }
     </style>
     <body>    
         <div class="navigation">
@@ -253,7 +271,7 @@
                 <div class="row">
                     <div class="column">
                         <img src="drawing1.PNG" style="width: 80%; margin-bottom: 10%; margin-top: 10%; border-radius: 50%;"> 
-                        <img src="drawing3.JPG" style="width: 80%; margin-bottom: 10%; margin-top: 10%; border-radius: 50%;">
+                        <img src="drawing2.JPG" style="width: 80%; margin-bottom: 10%; margin-top: 10%; border-radius: 50%;">
                     </div>
                     <div class="column" style="display: flex; align-items: center;">
                         <img src="cooking1.jpg" style="width: 80%; margin-bottom: 10%; margin-top: 10%; border-radius: 50%; margin-left: 10%;">  
@@ -347,10 +365,14 @@
             <div class="flex-item" style="width: 70%;">
                 <div class="row">
                     <div class="column">
-                        <div style="display: flex; flex-direction: column; color: gray; margin-bottom: 20%;
-                        align-items: center;">
-                            <div>
-                                <img src="DancingRobot.jpg" style="width: 80%;"> 
+                        <div  class="flex-container" style="flex-direction: column; margin-bottom: 20%;">
+                            <div  class="hoverImage" style="position: relative;">
+                                <a href="https://github.com/CPEN-291/mp_A_G4" style="color: rgb(83, 83, 83);">
+                                    <img src="DancingRobot.jpg" class="image" style="width: 80%;"> 
+                                    <div class="hoverEffect">
+                                        <i class="fas fa-code-branch" style="font-size: 40px;"></i>            
+                                    </div>
+                                </a>
                             </div>
                             <div style="background-color: white; text-align: left; width: 80%;">
                                 <p style="font-size: 12px; padding-left: 5%; padding-right: 2%;">
@@ -361,10 +383,14 @@
                                 
                             </div>
                         </div>
-                        <div style="display: flex; flex-direction: column; color: gray; margin-bottom: 20%;
-                        align-items: center;">
-                            <div>
-                                <img src="LineRobot.PNG" style="width: 80%;"> 
+                        <div  class="flex-container" style="flex-direction: column; margin-bottom: 20%;">
+                            <div  class="hoverImage" style="position: relative;">
+                                <a href="https://github.com/CPEN-291/P1_A_G4" style="color: rgb(83, 83, 83);">
+                                    <img src="LineRobot.PNG" class="image" style="width: 80%;"> 
+                                    <div class="hoverEffect">
+                                        <i class="fas fa-code-branch" style="font-size: 40px;"></i>            
+                                    </div>
+                                </a>
                             </div>
                             <div style="background-color: white; text-align: left; width: 80%;">
                                 <p style="font-size: 12px; padding-left: 5%; padding-right: 2%;">
@@ -377,10 +403,9 @@
                         </div>                  
                     </div>
                     <div class="column">
-                        <div style="display: flex; flex-direction: column; color: gray; margin-bottom: 20%;
-                        align-items: center;">
+                        <div  class="flex-container" style="flex-direction: column; margin-bottom: 20%;">
                             <div>
-                                <img src="DE1SoC1.jpg" style="width: 80%;"> 
+                                <img src="DE1SoC.jpg" style="width: 80%;"> 
                             </div>
                             <div style="background-color: white; text-align: left; width: 80%;">
                                 <p style="font-size: 12px; padding-left: 5%; padding-right: 2%;">
