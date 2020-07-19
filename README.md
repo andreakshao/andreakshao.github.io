@@ -1,2 +1,2 @@
 # andreakshao.github.io
-Project website!
+Personal website to showcase my projects and keep me motivated and accountable to continue creating more.
