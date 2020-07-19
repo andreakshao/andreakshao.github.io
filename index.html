@@ -26,13 +26,13 @@
             height: 40px;
             width: 40px;
             line-height: 42px;
-            background-color: darkgray;
+            background-color: rgb(189, 189, 189);
             border-radius: 50%;
             margin: 0 6px;
             cursor: pointer;
         }
         ol li:hover {
-            background-color:darkred;
+            background-color:rgb(170, 88, 88);;
             opacity: 0.5;
         }
         div.photo-grid {
@@ -46,17 +46,22 @@
             padding: 0 4px;
         }
         /* Create 2 columns */
-        .column {
+        .column-double {
             -ms-flex: 50%;
             flex: 50%;
             max-width: 50%;
         }
-        .column img {
-            width: 100%;
+        /* Create a smaller column */
+        .column-small {
+            -ms-flex: 40%;
+            flex: 40%;
+            max-width: 40%;
         }
-        .column div {
-            width: 100%;
-            height: auto;
+        /* Create 3 columns */
+        .column-triple {
+            -ms-flex: 33%;
+            flex: 33%;
+            max-width: 33%;
         }
         .navigation {
             display: flex;
@@ -110,10 +115,20 @@
             body {
                 overflow-x: hidden;
             }
-            .column {
+            .column-double {
                 -ms-flex: 100%;
                 flex: 100%;
                 max-width: 100%;
+            }
+            .column-small {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+            .column-triple {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;              
             }
             #Home {
                 height: 70%;
@@ -218,70 +233,56 @@
             </div>
         </div>
 
-        <div class="flex-container" id="AboutMe" style="flex-direction: row; flex-wrap: nowrap; background-color: darkgray; height: auto; 
-        padding-top: 2%; padding-bottom: 3%; align-items: flex-start;">
-            <div clasas="flex-item" style="color: grey; writing-mode: vertical-lr; text-orientation: mixed; width: 3%; 
-            letter-spacing: 8px; text-align: left; height: auto; font-size: smaller;">
-               <p>
-                    &#8226 &#8226 &#8226
-                    akshao@alumni.ubc.ca
-                </p>
+        <div class="flex-container" id="AboutMe" style="flex-direction: column; flex-wrap: nowrap; background-color: rgb(231, 231, 231); height: auto; 
+        width: 100%; align-items: center; justify-content: space-evenly; padding-top: 7%;">
+            <div class="flex-item" style="width: 100%;">
+                <p style="text-transform: uppercase; letter-spacing: 4px; font-size: 14px; 
+                font-weight: bold; color: rgb(133, 104, 104);">About Me</p>
             </div>
-            <div class="flex-item" style="color: white; line-height: 300%; text-align: left; width:45%; padding-left: 4%; padding-top: 4%;">
-                <ul style="list-style: none;">
-                    <li style="font-weight: bold;">
-                        <span style="padding-right: 5%; color: gray; font-size: 20px; letter-spacing: 5px">ABOUT ME</span> 
-                        <i class="fas fa-user" style="font-size: 20px; background-color: grey;
-                        height: 40px; width: 40px; border-radius: 50%; text-align: center; line-height: 38px;"></i>
-                        
-                    </li>
-                    <li>
-                        <i class="fas fa-map-marker-alt" style="font-size: 15px; background-color: grey;
-                        height: 30px; width: 30px; border-radius: 50%; text-align: center; line-height: 30px;"></i> 
-                        <span style="padding-left: 5%; letter-spacing: 2px; color: gray; ">University of British Columbia</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-graduation-cap" style="font-size: 15px; background-color: grey;
-                        height: 30px; width: 30px; border-radius: 50%; text-align: center; line-height: 30px;"></i>
-                        <span style="padding-left: 5%; letter-spacing: 2px; color: gray; ">Third Year Computer Engineering Student</span>
-                    </li>
-                    <li id="resumeDownload">
-                        <a href="www.google.ca" style="color: white; text-decoration: none;">
-                            <i class="fas fa-file-download" style="font-size: 15px; background-color: grey;
-                            height: 30px; width: 30px; border-radius: 50%; text-align: center; line-height: 30px;"></i>
-                        </a>
-                        <a href="www.google.ca" style="text-decoration: none; color: white;">
-                            <span style="padding-left: 5%; letter-spacing: 2px; color: gray; ">Download My Resume</span>
-                        </a>
-                       
-                    </li>
-                    <li style="padding-top: 20px;">
-                        Hello, world! 
-                        <br>
-                        <div style="line-height: 200%;">
-                            My name is Andrea Shao and I'm a small gal with big dreams.
-                            I'm a people person whose life goal is to never stop learning and I believe I'm in just the field for that!
-                            When I'm not coding, you can find me doing any of these things
-                            <i class="fas fa-long-arrow-alt-right" style="font-size: 15px; padding-left: 3%;"></i>
-                        </div>
-                    </li>
-                </ul>      
-            </div>  
-            <div class="flex-item" style="width: 50%; padding-left: 5%; padding-top: 4%;">
+            <div class="flex-item" style="width: 90%; display: flex; flex-direction: row; padding-top: 4%; padding-bottom: 2%;">
                 <div class="row">
-                    <div class="column">
-                        <img src="drawing1.PNG" style="width: 80%; margin-bottom: 10%; margin-top: 10%; border-radius: 50%;"> 
-                        <img src="drawing2.JPG" style="width: 80%; margin-bottom: 10%; margin-top: 10%; border-radius: 50%;">
+                    <div class="column-small" style="padding-bottom: 4%;">
+                        <img src="Andrea.jpg" style="border-radius: 50%; width: 250px;">
                     </div>
-                    <div class="column" style="display: flex; align-items: center;">
-                        <img src="cooking1.jpg" style="width: 80%; margin-bottom: 10%; margin-top: 10%; border-radius: 50%; margin-left: 10%;">  
+                    <div class="column-double">
+                        <p style="text-align: left; font-size: 18px; color: rgb(95, 95, 95); line-height: 180%;">
+                            <span style="font-weight: bold;"> Hello, World! </span>  
+                            <br>
+                            My name is <span style="font-weight: bold;">Andrea Shao</span> and I'm a 
+                            <span style="font-weight: bold;">third year Computer Engineering Student</span> at the 
+                            <span style="font-weight: bold;">University of British Columbia</span>.
+                            I'm a people person whose life goal is to never stop learning and I believe I'm in just the field for that! 
+                            Whether it be through school, projects, or people, I'm happiest when I'm acquiring new skills and expanding my worldview.
+                            <br><br>
+                        </p>
                     </div>
                 </div>
-            </div>          
+            </div>
+            <div class="flex-item" style="color: rgb(95, 95, 95);">
+                <p style="text-align: left; font-size: 18px;">
+                    When I'm not coding, you can find me doing any of these things 
+                    <span style="padding-left: 5px;">
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="flex-item" style="width: 80%; padding-top: 3%;">
+                <div class="row">
+                    <div class="column-triple" style="padding-bottom: 8%;">
+                        <img src="drawing1.PNG" style="width: 70%; border-radius: 50%;">
+                    </div>
+                    <div class="column-triple" style="padding-bottom: 8%;">
+                        <img src="cooking1.jpg" style="width: 70%; border-radius: 50%;">
+                    </div>
+                    <div class="column-triple" style="padding-bottom: 8%;">
+                        <img src="cat.png" style="width: 70%; border-radius: 50%;">
+                    </div>
+                </div>
+            </div>
+
         </div>
          
-        <div class="flex-container" id="Experiences" style="background-color: gainsboro; height:auto; 
-        flex-direction: column; color: black;">
+        <div class="flex-container" id="Experiences" style="background-color: gainsboro; height:auto; flex-direction: column; color: black;">
             <div class="flex-item" style="padding-top: 7%;">
                 <p style="text-transform: uppercase; letter-spacing: 4px; font-size: 14px; 
                 font-weight: bold; color: rgb(133, 104, 104);">Experience</p>
@@ -308,9 +309,9 @@
                             Sierra Wireless
                         </p>
                         <p style="padding-left: 5%; color: gray; line-height: 150%; font-size: 15px;">
-                            Worked in the software test team where I ran manual and automated tests for new builds 
-                            and releases of the company's various products. Followed test campaigns and created detailed bug reports
-                            when issues were found. Also wrote automated scripts using Python.
+                            Currently working in the software test team where I run manual and automated tests for new builds 
+                            and releases of the company's various products. I follow test campaigns and create detailed bug reports
+                            when issues are found. Additionally, I also write automated scripts using Python.
                         </p>
                     </div>
                 </div>
@@ -339,12 +340,12 @@
                         <p style="padding-left: 5%; color: gray; line-height: 150%; font-size: 15px;">
                             Relevant Coursework: <br>
                             <div class="flex-container" style="padding-left: 5%; color: gray; line-height: 150%;">
-                                <div class="flex-item" style="text-align: left; font-size: 13.5px;">
+                                <div class="flex-item" style="text-align: left; font-size: 13.5px; margin-right: 5%;">
                                     Intro to Computation in Engineering Design <br>
                                     Introduction to Microcomputers <br>
                                     Computer Engineering Design Studio I
                                 </div>
-                                <div class="flex-item" style="text-align: left; font-size: 13.5px; padding-left: 5%;">
+                                <div class="flex-item" style="text-align: left; font-size: 13.5px;">
                                     Principles of Software Construction <br>
                                     Basic Algorithms and Data Structures <br>
                                     Basics of Computer Systems
@@ -364,18 +365,18 @@
             </div>
             <div class="flex-item" style="width: 70%;">
                 <div class="row">
-                    <div class="column">
+                    <div class="column-double">
                         <div  class="flex-container" style="flex-direction: column; margin-bottom: 20%;">
                             <div  class="hoverImage" style="position: relative;">
                                 <a href="https://github.com/CPEN-291/mp_A_G4" style="color: rgb(83, 83, 83);">
                                     <img src="DancingRobot.jpg" class="image" style="width: 80%;"> 
                                     <div class="hoverEffect">
-                                        <i class="fas fa-code-branch" style="font-size: 40px;"></i>            
+                                        <i class="fab fa-github" style="font-size: 40px;"></i>            
                                     </div>
                                 </a>
                             </div>
                             <div style="background-color: white; text-align: left; width: 80%;">
-                                <p style="font-size: 12px; padding-left: 5%; padding-right: 2%;">
+                                <p style="font-size: 12px; padding-left: 5%; padding-right: 2%; color: rgb(95, 95, 95);">
                                     <span style="font-weight: bold; text-transform: uppercase; 
                                     letter-spacing: 1px;"> Dancing Robot </span>
                                     hello
@@ -388,12 +389,12 @@
                                 <a href="https://github.com/CPEN-291/P1_A_G4" style="color: rgb(83, 83, 83);">
                                     <img src="LineRobot.PNG" class="image" style="width: 80%;"> 
                                     <div class="hoverEffect">
-                                        <i class="fas fa-code-branch" style="font-size: 40px;"></i>            
+                                        <i class="fab fa-github" style="font-size: 40px;"></i>            
                                     </div>
                                 </a>
                             </div>
                             <div style="background-color: white; text-align: left; width: 80%;">
-                                <p style="font-size: 12px; padding-left: 5%; padding-right: 2%;">
+                                <p style="font-size: 12px; padding-left: 5%; padding-right: 2%; color: rgb(95, 95, 95);">
                                     <span style="font-weight: bold; text-transform: uppercase; 
                                     letter-spacing: 1px;"> Line Following Robot </span>
                                     hello
@@ -402,13 +403,13 @@
                             </div>
                         </div>                  
                     </div>
-                    <div class="column">
+                    <div class="column-double">
                         <div  class="flex-container" style="flex-direction: column; margin-bottom: 20%;">
                             <div>
                                 <img src="DE1SoC.jpg" style="width: 80%;"> 
                             </div>
                             <div style="background-color: white; text-align: left; width: 80%;">
-                                <p style="font-size: 12px; padding-left: 5%; padding-right: 2%;">
+                                <p style="font-size: 12px; padding-left: 5%; padding-right: 2%; color: rgb(95, 95, 95);">
                                     <span style="font-weight: bold; text-transform: uppercase; 
                                     letter-spacing: 1px;"> Basic RISC Machine </span>
                                     Created a simple reduced instruction set computer using Verilog on a DE1-SoC 
@@ -421,6 +422,20 @@
                         </div> 
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="flex-container" style="width: 100%; height: 20%; flex-direction: column; align-items: center; 
+        justify-content: center; flex-wrap: nowrap;">
+            <div class="flex-item">
+                <ol style="display: flex; list-style: none; padding: 0;">
+                    <li><a href="https://www.facebook.com/andrea.shao.94" title="Facebook" style="color: white;"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/andreashao/" title="Instagram" style="color: white;"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/andreakshao" title="GitHub" style="color: white;"><i class="fab fa-github"></i></a></li>
+                    <li><a href="mailto:akshao@alumni.ubc.ca" title="Email" style="color: white;"><i class="fa fa-envelope"></i></a></li>
+                </ol>             
+            </div>
+            <div class="flex-item" style="width: 100%;">
+                <p style="font-size: 10px; color: rgb(133, 104, 104);"><span>&#169;</span> 2020 Andrea Shao</p>
             </div>
         </div>
 
