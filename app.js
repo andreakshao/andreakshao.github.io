@@ -19,8 +19,20 @@ const navSlide = () => {
 
         // Menu animation
         menu.classList.toggle('toggle');
-    });
-    
-    
+    });    
 }
+
+const navBarTransparent = () => {
+    var nav = document.getElementById('nav');
+    window.onscroll = function(){
+        if (window.pageYOffset > 150) {
+                nav.style.background = "#A79797";
+            }
+        else {
+            nav.style.background = "transparent"
+        }
+    }
+}
+
+navBarTransparent();
 navSlide();
