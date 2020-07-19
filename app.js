@@ -25,7 +25,7 @@ const navSlide = () => {
 const navBarTransparent = () => {
     var nav = document.getElementById('nav');
     window.onscroll = function(){
-        if (window.pageYOffset > 150) {
+        if (window.pageYOffset > 100) {
                 nav.style.background = "#A79797";
             }
         else {
