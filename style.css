@@ -32,10 +32,11 @@ ol li {
     border-radius: 50%;
     margin: 0 6px;
     cursor: pointer;
+    transition: 0.5s;
 }
 ol li:hover {
-    background-color:rgb(170, 88, 88);;
-    opacity: 0.5;
+    background-color:rgb(146, 82, 82);;
+    opacity: 0.8;
 }
 div.photo-grid {
     box-sizing: border-box;
