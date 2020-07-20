@@ -82,9 +82,9 @@ div.photo-grid {
 }
 .logo {
     text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(233, 233, 233);
+    font-family: 'Oleo Script', cursive;
 }
 .navLinks {
     display: flex;
