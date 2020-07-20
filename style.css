@@ -99,10 +99,15 @@ div.photo-grid {
     font-weight: bold;
     font-size: 14px;
     color: rgb(233, 233, 233);
+    transition: 0.5s;
+}
+.navLinks a:hover {
+    color: rgb(88, 55, 55);
 }
 .menu {
     display: none;
     cursor: pointer;
+    transition: 0.5s;
 }
 .menu div {
     width: 25px;
