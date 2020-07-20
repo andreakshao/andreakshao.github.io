@@ -2,12 +2,15 @@ const navSlide = () => {
     const menu = document.querySelector('.menu');
     const nav = document.querySelector('.navLinks');
     const navLinks = document.querySelectorAll('.navLinks li');
+    const navbar = document.getElementById('nav')
 
     
     menu.addEventListener('click',()=>{
         // Toggle navigation
         nav.classList.toggle('navActive');
-
+        
+        navbar.style.background = "#A79797";
+    
         // Animate links
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
