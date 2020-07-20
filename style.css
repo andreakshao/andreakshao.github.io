@@ -3,12 +3,12 @@ body, html {
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-.flex-container {
+.flexContainer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-.flex-item {
+.flexItem {
     text-align: center;
 }
 #Name {
@@ -48,23 +48,23 @@ div.photo-grid {
     padding: 0 4px;
 }
 /* Create 2 columns */
-.column-double {
+.columnDouble {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
 }
-.column-double div {
+.columnDouble div {
     width: 100%;
     height: auto;
 }
 /* Create a smaller column */
-.column-small {
+.columnSmall {
     -ms-flex: 40%;
     flex: 40%;
     max-width: 40%;
 }
 /* Create 3 columns */
-.column-triple {
+.columnTriple {
     -ms-flex: 33%;
     flex: 33%;
     max-width: 33%;
@@ -85,15 +85,15 @@ div.photo-grid {
     font-size: 20px;
     color: rgb(233, 233, 233);
 }
-.nav-links {
+.navLinks {
     display: flex;
     justify-content: space-around;
     width: 40%;
 }
-.nav-links li {
+.navLinks li {
     list-style: none;
 }
-.nav-links a {
+.navLinks a {
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -121,17 +121,17 @@ div.photo-grid {
     body {
         overflow-x: hidden;
     }
-    .column-double {
+    .columnDouble {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
     }
-    .column-small {
+    .columnSmall {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
     }
-    .column-triple {
+    .columnTriple {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;              
@@ -145,7 +145,7 @@ div.photo-grid {
     #Experiences {
         height: auto;
     }
-    .nav-links {
+    .navLinks {
         position: absolute;
         right: 0px;
         height: 95vh;
@@ -157,7 +157,7 @@ div.photo-grid {
         width: 40%;
         transform: translateX(100%);
     }
-    .nav-links li {
+    .navLinks li {
         opacity: 0;
     }
     .menu {
@@ -170,7 +170,7 @@ div.photo-grid {
         font-size: 100%;
     }
 }
-.nav-active {
+.navActive {
     transform: translateX(0%);
     transition: transform 0.5s ease-in;
 }
@@ -209,4 +209,10 @@ div.photo-grid {
 }
 .hoverImage:hover .hoverEffect{
     opacity: 1;
+}
+.verticalLine {
+    width: 0.1%;
+    height: 10%;
+    position: absolute;
+    background-color: darkgray;
 }
