@@ -285,11 +285,12 @@ ol li a {
     padding-left: 5%; 
     color: gray; 
     line-height: 150%;
+    flex-wrap: wrap;
 }
 .coursesFlexItem {
     text-align: left; 
     font-size: 13.5px; 
-    margin-right: 4%;
+    margin-right: 3%;
 }
 
 /* Projects Page */
