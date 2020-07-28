@@ -58,6 +58,10 @@ body, html {
 .navLinks a:hover {
     color: rgb(88, 55, 55);
 }
+.navActive {
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+}
 .menu {
     display: none;
     cursor: pointer;
@@ -280,6 +284,20 @@ ol li a {
     line-height: 150%; 
     font-size: 15px;
 }
+.workSchoolLink {
+    padding-left: 5%;  
+    color: rgb(107, 87, 87);
+    font-size: 15px;
+}
+.workSchoolLink a {  
+    color: rgb(107, 87, 87);
+    font-size: 15px;
+    text-decoration: none;
+}
+.workSchoolLink a:hover {  
+    color: rgb(83, 70, 70);
+    text-decoration: underline;
+}
 .schoolFlexContainer {
     display: flex;
     padding-left: 5%; 
@@ -417,10 +435,6 @@ ol li a {
     #Greeting {
         font-size: 100%;
     }
-}
-.navActive {
-    transform: translateX(0%);
-    transition: transform 0.5s ease-in;
 }
 @keyframes navLinkFade {
     from {
