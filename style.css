@@ -335,11 +335,12 @@ ol li a {
 }
 .hoverImage {
     position: relative;
+    width: 80%;
 }
-.hoverImage:hover .projectImage {
+.hoverImage a:hover .projectImage {
     opacity: 0.3;
 }
-.hoverImage:hover .hoverEffect{
+.hoverImage a:hover .hoverEffect{
     opacity: 1;
 }
 .hoverImage a {
