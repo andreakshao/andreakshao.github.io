@@ -58,10 +58,6 @@ body, html {
 .navLinks a:hover {
     color: rgb(88, 55, 55);
 }
-.navActive {
-    transform: translateX(0%);
-    transition: transform 0.5s ease-in;
-}
 .menu {
     display: none;
     cursor: pointer;
@@ -335,7 +331,6 @@ ol li a {
 }
 .hoverImage {
     position: relative;
-    width: 80%;
 }
 .hoverImage a:hover .projectImage {
     opacity: 0.3;
@@ -436,6 +431,10 @@ ol li a {
     #Greeting {
         font-size: 100%;
     }
+}
+.navActive {
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
 }
 @keyframes navLinkFade {
     from {
