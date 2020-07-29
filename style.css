@@ -432,6 +432,11 @@ ol li a {
         font-size: 100%;
     }
 }
+@media screen and (max-width: 600px) {
+    .homeText {
+        font-size: 10px;
+    }
+}
 .navActive {
     transform: translateX(0%);
     transition: transform 0.5s ease-in;
